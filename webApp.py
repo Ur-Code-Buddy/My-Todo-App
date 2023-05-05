@@ -1,6 +1,15 @@
 import streamlit as st
 import functions
 
+ hide_st_style = """
+        <style>
+        #MainMenu{visibility:hidden;}
+        footer{visibility: hidden;}
+        </style>
+        """
+
+        st.markdown(hide_st_style,unsafe_allow_html=True)
+
 todos = functions.get_todos()
 
 def add_todo():
